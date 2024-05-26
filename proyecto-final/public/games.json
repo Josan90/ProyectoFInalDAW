@@ -1,0 +1,17 @@
+[
+    { "name": "Alan Wake 2", "image": "./src/assets/Cover/alanWake2C.jpeg" },
+    { "name": "Hollow Knight", "image": "./src/assets/Cover/hollowKnightC.jpg" },
+    { "name": "Lies of P", "image": "./src/assets/Cover/liesOfPC.jpg" },
+    { "name": "Dead Space Remake", "image": "./src/assets/Cover/deadSpaceC.jpg" },
+    { "name": "Lords of the Fallen", "image": "./src/assets/Cover/lordsOfTheFallenC.jpg" },
+    { "name": "Stellar Blade", "image": "./src/assets/Cover/stellarBladeC.jpg" },
+    { "name": "Dragon's Dogma 2", "image": "./src/assets/Cover/dragonsDogma2C.jpg" },
+    { "name": "Final Fantasy 7 Rebirth", "image": "./src/assets/Cover/ff7RebirthC.jpg" },
+    { "name": "Industria", "image": "./src/assets/Cover/industriaC.jpg" },
+    { "name": "No Rest for the Wicked", "image": "./src/assets/Cover/noRestforTheWickedC.jpg" },
+    { "name": "Persona 3 Reloaded", "image": "./src/assets/Cover/p3ReloadedC.jpg" },
+    { "name": "Pacific Drive", "image": "./src/assets/Cover/pacificDriveC.jpg" },
+    { "name": "Suicide Squad: KTJL", "image": "./src/assets/Cover/suicideSquadC.jpg" },
+    { "name": "Yakuza 8 Infinite Wealth", "image": "./src/assets/Cover/yakuza8C.jpg" }
+  ]
+  
