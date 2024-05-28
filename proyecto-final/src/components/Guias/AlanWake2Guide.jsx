@@ -6,7 +6,7 @@ function AlanWake2Guide() {
   const sections = [
     { id: 'introduction', title: 'Introducción', image: '/images/alan-wake-2/portadaAW2.jpg' },
     { id: 'chapter0', title: 'El regreso 0: La secta', image: '/images/alan-wake-2/chapter0.jpg' },
-    { id: 'chapter1', title: 'El regreso 1: Invitación (Saga)', image: '/images/alan-wake-2/chapter1.jpg' },
+    { id: 'chapter1', title: 'El regreso 1: Invitación (Saga)', image: '/images/alan-wake-2/img5AW2.jpg' },
     { id: 'chapter2', title: 'El regreso 2: El Corazón (Saga)', image: '/images/alan-wake-2/chapter2.jpg' },
     { id: 'chapter3', title: 'La iniciación 1: De madrugada (Alan)', image: '/images/alan-wake-2/chapter3.jpg' },
     { id: 'chapter4', title: 'La iniciación 2: Casey (Alan)', image: '/images/alan-wake-2/chapter4.jpg' },
@@ -45,17 +45,17 @@ function AlanWake2Guide() {
   const renderSection = () => {
     const section = sections.find(sec => sec.id === currentSection);
     return (
-      <section className="mb-8 max-w-[1200px]">
+      <section className="mb-8 max-w-[1000px]">
         {currentSection === 'introduction' && (
           <div>
-            <h1 className="text-3xl font-bold text-[#DEB992] mb-4">Guía de Alan Wake 2</h1>
-            <img src={section.image} alt={section.title} className="w-full h-64 object-cover mb-4 rounded-xl" />
-            <h2 className="text-2xl font-bold text-[#DEB992] mb-2">Introducción</h2>
+            <h1 className="text-4xl font-bold text-[#DEB992] mb-4">Guía de Alan Wake 2</h1>
+            <img src={section.image} alt={section.title} className="w-full h-80 object-cover mb-4 rounded-xl" />
+            <h2 className="text-3xl font-bold text-[#DEB992] mb-2">Introducción</h2>
             <div className="border-b-2 border-[#DEB992] mb-4"></div>
             <p className="text-gray-200">
               Bienvenido a la guía completa de Alan Wake 2. En esta guía, encontrarás todo lo necesario para completar el juego, desde consejos básicos hasta estrategias avanzadas.
             </p>
-            <h2 className="text-2xl font-bold text-[#DEB992] mt-8 mb-2">Índice</h2>
+            <h2 className="text-3xl font-bold text-[#DEB992] mt-8 mb-2">Índice</h2>
             <div className="border-b-2 border-[#DEB992] mb-4"></div>
             <table className="table-auto w-full text-gray-200 rounded-lg overflow-hidden">
               <thead>
@@ -77,18 +77,74 @@ function AlanWake2Guide() {
                 ))}
               </tbody>
             </table>
-            <h2 className="text-2xl font-bold text-[#DEB992] mt-8 mb-2">Antes de jugar</h2>
+            <h2 className="text-3xl font-bold text-[#DEB992] mt-8 mb-2">Antes de jugar</h2>
             <div className="border-b-2 border-[#DEB992] mb-4"></div>
             <p className="text-gray-200">
               Antes de sumergirte en el mundo de Alan Wake 2, es importante que sepas algunas cosas. Este juego combina elementos de acción y terror psicológico, así que prepárate para enfrentar tanto enemigos físicos como desafíos mentales. Mantén tu linterna y tus baterías siempre listas, y no olvides explorar cada rincón para encontrar recursos valiosos.
             </p>
           </div>
         )}
-        {currentSection !== 'introduction' && !section.isDropdown && (
+        {currentSection === 'chapter1' && (
           <div>
-            <h2 className="text-2xl font-bold text-[#DEB992] mb-2">{section.title}</h2>
+            <h2 className="text-3xl font-bold text-[#DEB992] mb-2">{section.title}</h2>
             <div className="border-b-2 border-[#DEB992] mb-4"></div>
-            <img src={section.image} alt={section.title} className="w-full h-64 object-cover mb-4 rounded" />
+            <img src={section.image} alt={section.title} className="w-full h-80 object-cover mb-4 rounded-xl" />
+            <div className="border-2 border-[#DEB992] p-4 rounded-lg mb-4 max-w-3xl mx-auto">
+              <h3 className="text-xl font-bold text-[#DEB992]">Resumen del Capítulo</h3>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-2 text-center">
+                <div>
+                  <p className="text-gray-400">Páginas del Manuscrito</p>
+                  <p className="text-white text-lg">5</p>
+                </div>
+                <div>
+                  <p className="text-gray-400">Fiambreras</p>
+                  <p className="text-white text-lg">3</p>
+                </div>
+                <div>
+                  <p className="text-gray-400">Cabezas de Ciervo</p>
+                  <p className="text-white text-lg">2</p>
+                </div>
+                <div>
+                  <p className="text-gray-400">Cofres de la Secta</p>
+                  <p className="text-white text-lg">4</p>
+                </div>
+                <div>
+                  <p className="text-gray-400">Duración</p>
+                  <p className="text-white text-lg">1.5h</p>
+                </div>
+              </div>
+            </div>
+            <h3 className="text-3xl font-bold text-[#DEB992] mt-8 mb-2">El agente de la zona</h3>
+            <img src="/images/alan-wake-2/img1AW2.jpg" alt="El agente de la zona" className="w-1/2 h-auto mx-auto object-cover mb-4 rounded-xl" />
+            <p className="text-gray-200 mb-4">
+              Recorre la zona en busca de pistas. Habla con los habitantes y obtén información valiosa que te ayudará en tu misión. Es importante prestar atención a los detalles y asegurarse de no dejar ninguna pista sin descubrir. La colaboración con los personajes secundarios también puede ofrecer pistas cruciales para avanzar en la historia.
+            </p>
+            <h3 className="text-3xl font-bold text-[#DEB992] mt-8 mb-2">El Lugar Mental</h3>
+            <img src="/images/alan-wake-2/img2AW2.jpg" alt="El Lugar Mental" className="w-1/2 h-auto mx-auto object-cover mb-4 rounded-xl" />
+            <p className="text-gray-200 mb-4">
+              Adéntrate en el Lugar Mental para descubrir los secretos que oculta. Aquí encontrarás desafíos únicos y enemigos formidables. Prepárate para enfrentar situaciones inesperadas y usa tus habilidades para superar los obstáculos. Recuerda que la paciencia y la observación son claves para avanzar en este entorno mental.
+            </p>
+            <h3 className="text-3xl font-bold text-[#DEB992] mt-8 mb-2">La Escena del Crimen</h3>
+            <img src="/images/alan-wake-2/img3AW2.jpg" alt="La Escena del Crimen" className="w-1/2 h-auto mx-auto object-cover mb-4 rounded-xl" />
+            <p className="text-gray-200 mb-4">
+              Investiga la escena del crimen. Aquí encontrarás pistas importantes que te ayudarán a entender mejor la situación. No olvides revisar cada detalle minuciosamente. La capacidad de observar y deducir es esencial para resolver los misterios que se presentan en esta etapa del juego.
+            </p>
+            <div className="border-2 border-[#1BA098] p-4 rounded-lg mt-4 max-w-xl mx-auto">
+              <h4 className="text-xl font-bold text-[#1BA098]">Trofeo: Territorio de pesadilla</h4>
+              <p className="text-gray-200">Obtenido al conseguir tu primer mapa.</p>
+            </div>
+            <h3 className="text-3xl font-bold text-[#DEB992] mt-8 mb-2">Investigando Cauldron Lake</h3>
+            <img src="/images/alan-wake-2/img4AW2.jpg" alt="Investigando Cauldron Lake" className="w-1/2 h-auto mx-auto object-cover mb-4 rounded-xl" />
+            <p className="text-gray-200 mb-4">
+              Finalmente, dirígete a Cauldron Lake para continuar tu investigación. Este lugar es crucial para desentrañar el misterio y avanzar en la historia. Explora cada rincón y asegúrate de interactuar con todos los elementos del entorno. La clave para progresar radica en la exploración y la resolución de enigmas.
+            </p>
+          </div>
+        )}
+        {currentSection !== 'introduction' && currentSection !== 'chapter1' && !section.isDropdown && (
+          <div>
+            <h2 className="text-3xl font-bold text-[#DEB992] mb-2">{section.title}</h2>
+            <div className="border-b-2 border-[#DEB992] mb-4"></div>
+            <img src={section.image} alt={section.title} className="w-full h-auto mb-4 rounded" />
             <p className="text-gray-200">
               Contenido del capítulo: {section.title}.
             </p>
@@ -96,7 +152,7 @@ function AlanWake2Guide() {
         )}
         {section.isDropdown && section.dropdownItems.map(item => (
           <div key={item.id}>
-            <h2 className="text-2xl font-bold text-[#DEB992] mb-2">{item.title}</h2>
+            <h2 className="text-3xl font-bold text-[#DEB992] mb-2">{item.title}</h2>
             <div className="border-b-2 border-[#DEB992] mb-4"></div>
             <p className="text-gray-200">
               Contenido del apartado: {item.title}.
