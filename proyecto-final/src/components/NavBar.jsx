@@ -70,7 +70,7 @@ function NavBar() {
                     {user.nombreUsuario}
                   </button>
                   {profileOpen && (
-                    <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                    <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
                       <div className="py-1">
                         <Link to="/perfil" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={toggleProfileMenu}>
                           Perfil
@@ -101,7 +101,7 @@ function NavBar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden">
+        <div className="md:hidden z-50">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="/" className="text-[#cbd5e1] hover:text-[#DEB992] block px-3 py-2 rounded-md text-base font-medium" onClick={toggleMenu}>
               Inicio
@@ -123,7 +123,7 @@ function NavBar() {
                   <Link to="/perfil" className="text-[#cbd5e1] hover:text-[#DEB992] block px-3 py-2 rounded-md text-base font-medium" onClick={toggleMenu}>
                     Perfil
                   </Link>
-                  <Link to="/settings" className="text-[#cbd5e1] hover:text-[#DEB992] block px-3 py-2 rounded-md text-base font-medium" onClick={toggleMenu}>
+                  <Link to="/configuracion" className="text-[#cbd5e1] hover:text-[#DEB992] block px-3 py-2 rounded-md text-base font-medium" onClick={toggleMenu}>
                     Configuración
                   </Link>
                   <button onClick={handleLogout} className="text-[#cbd5e1] hover:text-[#DEB992] block w-full text-left px-3 py-2 rounded-md text-base font-medium">
