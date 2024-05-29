@@ -19,11 +19,16 @@ app.use('/api/juegos', juegosRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/comentarios', comentariosRoutes);
 
-// Exportar la aplicacion
-module.exports = app;
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('No funciona!');
+});
 
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
+
+// Exportar la aplicacion
+module.exports = app;
