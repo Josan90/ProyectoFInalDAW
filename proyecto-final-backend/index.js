@@ -19,7 +19,12 @@ app.use('/api/juegos', juegosRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/comentarios', comentariosRoutes);
 
-// Exportar la aplicacion
+// Middleware de manejo de errores
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
 module.exports = app;
 
 const PORT = process.env.PORT || 3001;
