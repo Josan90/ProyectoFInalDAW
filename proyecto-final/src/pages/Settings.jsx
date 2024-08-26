@@ -42,7 +42,7 @@ const Settings = () => {
       await axios.put(`http://localhost:3001/api/users/${user.idUsuario}`, {
         nombreUsuario: username,
         emailUsuario: email,
-        claveUsuario: user.claveUsuario, // Si también se actualiza la contraseña, se debe manejar aquí
+        claveUsuario: user.claveUsuario, //Esto esta pero no funciona aun
       });
       alert('Cuenta actualizada correctamente');
     } catch (err) {

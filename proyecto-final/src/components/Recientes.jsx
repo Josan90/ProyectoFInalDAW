@@ -18,7 +18,8 @@ function Recientes() {
         <div className="rounded-xl">
           <Link to="./guia/alan-wake-2">
             <div className="rounded-xl overflow-hidden group">
-              <img src={alanWake2C} className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105" alt="Alan Wake 2" />
+              <img src={alanWake2C} className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105" 
+              alt="Alan Wake 2" />
             </div>
             <h2 className="text-[#cbd5e1] text-2xl md:text-2xl font-medium mt-2 text-center">
               Alan Wake 2

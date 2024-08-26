@@ -15,7 +15,8 @@ function Proximamente() {
       <div className="grid mt-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6">
         <div className="rounded-xl">
           <div className="rounded-xl overflow-hidden group">
-            <img src={bloodBorneC} className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105" alt="Bloodborne" />
+            <img src={bloodBorneC} className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105" 
+            alt="Bloodborne" />
           </div>
           <h2 className="text-[#cbd5e1] text-2xl md:text-2xl font-medium mt-2 text-center">
             Bloodborne
@@ -24,7 +25,8 @@ function Proximamente() {
 
         <div className="rounded-xl">
           <div className="rounded-xl overflow-hidden group">
-            <img src={hellBlade2C} className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105" alt="Hellblade 2" />
+            <img src={hellBlade2C} className="w-full h-auto object-cover transform transition-transform duration-300 group-hover:scale-105" 
+            alt="Hellblade 2" />
           </div>
           <h2 className="text-[#cbd5e1] text-2xl md:text-2xl font-medium mt-2 text-center">
             Hellblade 2

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../config/database');
 
-// Ruta para obtener un usuario por su id
+//Ruta para obtener un usuario por su id
 router.get('/:idUsuario', async (req, res) => {
   const { idUsuario } = req.params;
   try {
@@ -20,36 +20,36 @@ router.get('/:idUsuario', async (req, res) => {
 // Ruta para eliminar un usuario y sus datos relacionados
 router.delete('/:idUsuario', async (req, res) => {
   const { idUsuario } = req.params;
-  const connection = await pool.getConnection(); // Get a connection from the pool
+  const connection = await pool.getConnection(); // Pool de conexiones
   try {
-    await connection.beginTransaction(); // Start transaction
+    await connection.beginTransaction();
 
     console.log(`Eliminando datos de completacion para el usuario ${idUsuario}`);
-    // Delete from completacion table first
+    // ELiminar de completacion
     await connection.query('DELETE FROM completacion WHERE idUsuarioFK = ?', [idUsuario]);
 
     console.log(`Eliminando usuario ${idUsuario}`);
-    // Delete from usuarios table
+    // Eliminar usuario
     const [result] = await connection.query('DELETE FROM usuarios WHERE idUsuario = ?', [idUsuario]);
 
     if (result.affectedRows === 0) {
       throw new Error('Usuario no encontrado');
     }
 
-    await connection.commit(); // Commit the transaction
+    await connection.commit();
 
     console.log(`Usuario ${idUsuario} eliminado correctamente`);
     res.status(204).end();
   } catch (err) {
-    await connection.rollback(); // Rollback the transaction in case of error
+    await connection.rollback(); // Caso de error
     console.error(`Error al eliminar usuario ${idUsuario}:`, err.message);
     res.status(500).json({ error: err.message });
   } finally {
-    connection.release(); // Release the connection back to the pool
+    connection.release(); // Libera conexion?
   }
 });
 
-// Ruta para obtener estadísticas y los últimos 10 juegos añadidos por un usuario
+// Ruta para obtener estadísticas y los últimos juegos añadidoso
 router.get('/estadisticas/:idUsuario', async (req, res) => {
   const { idUsuario } = req.params;
   try {

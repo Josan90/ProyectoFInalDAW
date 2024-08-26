@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import image1 from '../assets/Grandes/alanWake2G.jpg';
-import image2 from '../assets/Grandes/hollowKnightG.jpg';
-import image3 from '../assets/Grandes/deadSpaceG.jpeg';
+import React, { useState, useEffect } from 'react'
+import image1 from '../assets/Grandes/alanWake2G.jpg'
+import image2 from '../assets/Grandes/hollowKnightG.jpg'
+import image3 from '../assets/Grandes/deadSpaceG.jpeg'
 
 const Carousel = ({ children }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,7 +11,7 @@ const Carousel = ({ children }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % childrenArray.length);
-    }, 4000); // Intervalo de imagenes
+    }, 4000); //Intervalo de tiempo
 
     return () => clearInterval(interval);
   }, [childrenArray.length]);
@@ -41,7 +41,7 @@ const Carousel = ({ children }) => {
   );
 };
 
-export function CarouselDefault() {
+export function Carrusel() {
   return (
     <Carousel>
       <img
